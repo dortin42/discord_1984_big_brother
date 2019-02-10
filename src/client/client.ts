@@ -1,10 +1,13 @@
-import * as Discord from 'discord.js'
+import * as Commando from 'discord.js-commando';
 
 export default class BigBrotherClient {
-    private client: Discord.Client;
+    private client: Commando.CommandoClient;
 
     constructor() {
-        this.client = new Discord.Client();
+        this.client = new Commando.CommandoClient({
+            commandPrefix: '!'
+        });
+        this.client.registry.registerDefaults();
         this.client.on('ready', () => {
             console.log(`Connected as ${this.client.user.tag}`);
         });
