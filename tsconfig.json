@@ -1,0 +1,14 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOption": {
+    "module": "commonjs",
+    "sourceMap": false,
+    "target": "ES6",
+    "outDir": "build"
+  }
+}
